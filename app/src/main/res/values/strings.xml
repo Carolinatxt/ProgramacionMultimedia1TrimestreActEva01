@@ -1,0 +1,57 @@
+<resources>
+    <!-- Información general -->
+    <string name="app_name">ActEva01</string>
+    <string name="app_logo">Logotipo principal de la aplicación</string>
+    <string name="app_description">Aplicación Android desarrollada en Kotlin con 3 pantallas: Principal, Presentación y Formulario.</string>
+
+    <!-- Pantalla principal (MainActivity) -->
+    <string name="nombre_principal">CAROLINA DE LA LOSA</string>
+    <string name="eslogan_principal">Programación multimedia</string>
+    <string name="mensaje_bienvenida">Bienvenid@ a mi aplicación</string>
+    <string name="ir_presentacion">Ver presentación</string>
+    <string name="footer_text">v1.0 • 2025</string>
+
+    <!-- Pantalla de presentación (PresentationActivity) -->
+    <string name="titulo_presentacion">Presentación personal</string>
+    <string name="nombre_label">Nombre:</string>
+    <string name="edad_label">Edad:</string>
+    <string name="descripcion_label">Descripción:</string>
+    <string name="ir_formulario">Ir al formulario</string>
+
+    <!-- Valores dinámicos de presentación -->
+    <string name="nombre_valor">Carolina de la Losa</string>
+    <string name="edad_valor">22 años</string>
+    <string name="descripcion_texto">Soy una desarrolladora en formación interesada en Android y Kotlin. Me apasiona el diseño y la tecnología móvil.</string>
+
+    <!-- Pantalla de formulario (FormActivity) -->
+    <string name="titulo_formulario">Formulario de contacto</string>
+    <string name="subtitulo_formulario">Completa el formulario para ponerte en contacto</string>
+    <string name="icono_formulario_desc">Icono de formulario</string>
+    <string name="campo_nombre">Nombre</string>
+    <string name="campo_email">Correo electrónico</string>
+    <string name="campo_mensaje">Mensaje</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="btn_limpiar">Limpiar campos</string>
+
+    <!-- Mensajes de confirmación -->
+    <string name="confirmacion_formulario_enviado">Gracias %1$s, su formulario se ha enviado correctamente.</string>
+    <string name="confirmacion_enviado">Gracias por tu mensaje. Te responderé lo antes posible.</string>
+
+    <!-- Mensajes de error / validaciones -->
+    <string name="error_campo_vacio">Campo obligatorio</string>
+    <string name="error_email_invalido">Correo electrónico no válido</string>
+    <string name="error_email_invalido_formato">Introduce un correo válido, por ejemplo: usuario@dominio.com</string>
+
+    <!-- Mensajes Toast -->
+    <string name="toast_enviado">Mensaje enviado correctamente ✉️</string>
+    <string name="toast_campos_incompletos">Por favor, completa todos los campos antes de enviar.</string>
+    <string name="toast_campos_limpiados">Campos limpiados correctamente.</string>
+
+    <!-- Textos adicionales -->
+    <string name="volver_atras">Volver</string>
+
+    <!-- Descripciones de iconos (accesibilidad) -->
+    <string name="icono_nombre_desc">Icono que representa el campo de nombre</string>
+    <string name="icono_edad_desc">Icono que representa la edad</string>
+    <string name="icono_descripcion_desc">Icono informativo de descripción</string>
+</resources>

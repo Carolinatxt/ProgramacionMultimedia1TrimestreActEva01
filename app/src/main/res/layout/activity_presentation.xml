@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_principal"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/presentationRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context=".PresentationActivity">
+
+        <!-- Título principal -->
+        <TextView
+            android:id="@+id/tvTituloPresentacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_presentacion"
+            android:textColor="@color/rosa_suave"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:layout_marginTop="24dp" />
+
+        <!-- Imagen o avatar -->
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_logo"
+            android:scaleType="fitCenter"
+            android:elevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloPresentacion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Divisor decorativo superior -->
+        <View
+            android:id="@+id/divisorSuperior"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/rosa_suave"
+            android:alpha="0.6"
+            app:layout_constraintTop_toBottomOf="@id/imgAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Card contenedor de la información personal -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInformacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#10FFFFFF"
+            app:strokeColor="@color/rosa_suave"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/divisorSuperior"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Campo: Nombre -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        android:layout_marginEnd="12dp"
+                        android:alpha="0.8"
+                        app:tint="@color/rosa_suave"
+                        android:contentDescription="@null"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombre_label"
+                        android:textColor="@color/gris_texto"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tvNombreValor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/nombre_valor"
+                        android:textColor="@color/rosa_suave"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"/>
+                </LinearLayout>
+
+                <!-- Divisor interno -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/rojo_claro"
+                    android:alpha="0.3"
+                    android:layout_marginVertical="12dp"/>
+
+                <!-- Campo: Edad -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_today"
+                        android:layout_marginEnd="12dp"
+                        android:alpha="0.8"
+                        app:tint="@color/rosa_suave"
+                        android:contentDescription="@null"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edad_label"
+                        android:textColor="@color/gris_texto"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tvEdadValor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/edad_valor"
+                        android:textColor="@color/rosa_suave"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-light"/>
+                </LinearLayout>
+
+                <!-- Divisor interno -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/rojo_claro"
+                    android:alpha="0.3"
+                    android:layout_marginVertical="12dp"/>
+
+                <!-- Campo: Descripción -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_info_details"
+                            android:layout_marginEnd="12dp"
+                            android:alpha="0.8"
+                            app:tint="@color/rosa_suave"
+                            android:contentDescription="@null"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/descripcion_label"
+                            android:textColor="@color/gris_texto"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvDescripcionValor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descripcion_texto"
+                        android:textColor="@color/rosa_suave"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-light"
+                        android:lineSpacingExtra="4dp"
+                        android:alpha="0.9"
+                        android:layout_marginStart="36dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Divisor decorativo inferior -->
+        <View
+            android:id="@+id/divisorInferior"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:background="@color/rojo_claro"
+            android:alpha="0.4"
+            app:layout_constraintTop_toBottomOf="@id/cardInformacion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="28dp"/>
+
+        <!-- Botón para ir al formulario -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnIrFormulario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ir_formulario"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:backgroundTint="@color/rojo_acento"
+            android:fontFamily="sans-serif-medium"
+            app:cornerRadius="25dp"
+            app:rippleColor="@color/rojo_claro"
+            android:elevation="8dp"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            app:layout_constraintTop_toBottomOf="@id/divisorInferior"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="32dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

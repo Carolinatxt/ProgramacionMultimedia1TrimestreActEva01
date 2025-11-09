@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema base de la aplicación -->
+    <style name="Base.Theme.ActEva01" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores personalizados -->
+        <item name="colorPrimary">@color/rojo_acento</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="android:statusBarColor">@color/fondo_principal</item>
+        <item name="android:navigationBarColor">@color/fondo_principal</item>
+        <item name="android:windowBackground">@color/fondo_principal</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Tema principal -->
+    <style name="Theme.ActEva01" parent="Base.Theme.ActEva01" />
+
+    <!-- Tema del splash inicial (fondo + logo centrado) -->
+    <style name="Theme.ActEva01.Launcher" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Fondo de inicio -->
+        <item name="android:windowBackground">@color/fondo_principal</item>
+        <!-- Logo centrado (usa tu icono redondo o logo personalizado) -->
+        <!---NO PASA NADA POR QUE DE ESTE "ERROR" DE ABAJO -->
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
+        <!-- Después del splash, aplica el tema principal -->
+        <item name="android:theme">@style/Theme.ActEva01</item>
+    </style>
+
+</resources>

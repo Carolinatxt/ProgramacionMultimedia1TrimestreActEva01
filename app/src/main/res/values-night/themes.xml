@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema base en modo oscuro -->
+    <style name="Base.Theme.ActEva01" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Mismos colores personalizados para mantener la coherencia -->
+        <item name="colorPrimary">@color/rojo_acento</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="android:statusBarColor">@color/fondo_principal</item>
+        <item name="android:navigationBarColor">@color/fondo_principal</item>
+        <item name="android:windowBackground">@color/fondo_principal</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Tema principal -->
+    <style name="Theme.ActEva01" parent="Base.Theme.ActEva01" />
+
+    <!-- Tema del splash inicial (modo oscuro) -->
+    <style name="Theme.ActEva01.Launcher" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Fondo oscuro vino -->
+        <item name="android:windowBackground">@color/fondo_principal</item>
+        <!-- Logo centrado, NO PASA NADA QUE APAREZCA ESTE ERROR-->
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
+        <!-- Aplica el mismo tema principal después del splash -->
+        <item name="android:theme">@style/Theme.ActEva01</item>
+    </style>
+
+</resources>

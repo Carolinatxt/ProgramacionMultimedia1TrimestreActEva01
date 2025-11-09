@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_principal"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/formRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context=".FormActivity">
+
+        <!-- Icono del formulario -->
+        <ImageView
+            android:id="@+id/ivIconoFormulario"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@android:drawable/ic_dialog_email"
+            android:contentDescription="@string/icono_formulario_desc"
+            app:tint="@color/rosa_suave"
+            android:alpha="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Título del formulario -->
+        <TextView
+            android:id="@+id/tvTituloFormulario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_formulario"
+            android:textColor="@color/rosa_suave"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="#66000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintTop_toBottomOf="@id/ivIconoFormulario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            android:gravity="center"/>
+
+        <!-- Subtítulo descriptivo -->
+        <TextView
+            android:id="@+id/tvSubtitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitulo_formulario"
+            android:textColor="@color/rosa_suave"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:alpha="0.9"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloFormulario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginHorizontal="24dp"/>
+
+        <!-- Divisor decorativo -->
+        <View
+            android:id="@+id/divisor"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="@color/rojo_claro"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Card contenedor del formulario -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardFormulario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#30FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/divisor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Campo: Nombre -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_input_field"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        app:tint="@color/rosa_suave"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@null" />
+
+                    <EditText
+                        android:id="@+id/edNombre"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:layout_weight="1"
+                        android:hint="@string/campo_nombre"
+                        android:textColor="@color/blanco"
+                        android:textColorHint="#99FFFFFF"
+                        android:inputType="textPersonName"
+                        android:autofillHints="name"
+                        android:fontFamily="sans-serif"
+                        android:textSize="16sp"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"/>
+                </LinearLayout>
+
+                <!-- Campo: Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_input_field"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_dialog_email"
+                        app:tint="@color/rosa_suave"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@null" />
+
+                    <EditText
+                        android:id="@+id/edEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:layout_weight="1"
+                        android:hint="@string/campo_email"
+                        android:textColor="@color/blanco"
+                        android:textColorHint="#99FFFFFF"
+                        android:inputType="textEmailAddress"
+                        android:autofillHints="emailAddress"
+                        android:fontFamily="sans-serif"
+                        android:textSize="16sp"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"/>
+                </LinearLayout>
+
+                <!-- Campo: Mensaje -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:background="@drawable/bg_input_field"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        app:tint="@color/rosa_suave"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@null" />
+
+                    <EditText
+                        android:id="@+id/edMensaje"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:hint="@string/campo_mensaje"
+                        android:textColor="@color/blanco"
+                        android:textColorHint="#99FFFFFF"
+                        android:inputType="textMultiLine"
+                        android:autofillHints="none"
+                        android:gravity="top|start"
+                        android:fontFamily="sans-serif"
+                        android:textSize="16sp"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="8dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Botón Enviar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnviar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_enviar"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:backgroundTint="@color/rojo_acento"
+            app:cornerRadius="25dp"
+            app:rippleColor="@color/rojo_claro"
+            android:elevation="6dp"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="28dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            app:layout_constraintTop_toBottomOf="@id/cardFormulario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"/>
+
+        <!-- Botón Limpiar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLimpiar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_limpiar"
+            android:textAllCaps="false"
+            android:textColor="@color/rosa_suave"
+            android:fontFamily="sans-serif-medium"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeColor="@color/rojo_claro"
+            app:strokeWidth="2dp"
+            app:cornerRadius="25dp"
+            app:rippleColor="@color/rosa_suave"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_marginTop="12dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            app:layout_constraintTop_toBottomOf="@id/btnEnviar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"/>
+
+        <!-- Texto de confirmación -->
+        <TextView
+            android:id="@+id/tvConfirmacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/rosa_suave"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:background="@drawable/bg_confirmacion"
+            app:layout_constraintTop_toBottomOf="@id/btnLimpiar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,13 @@
+<resources>
+    <!-- Paleta principal -->
+    <color name="fondo_principal">#2A0000</color>      <!-- Fondo oscuro vino -->
+    <color name="rojo_acento">#D12C2C</color>          <!-- Botones y elementos destacados -->
+    <color name="rojo_claro">#E53935</color>           <!-- Acentos y resaltados -->
+    <color name="rosa_suave">#F8AFAF</color>           <!-- Textos principales claros -->
+    <color name="blanco">#FFFFFF</color>               <!-- Texto sobre botones oscuros -->
+
+    <!-- Colores complementarios -->
+    <color name="negro">#000000</color>
+    <color name="gris_texto">#BDBDBD</color>
+    <color name="rosa">#FFC0CB</color>
+</resources>
