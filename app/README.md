@@ -102,7 +102,7 @@ Deberías ver la pantalla principal con:
 
 ### 1. MainActivity – Pantalla Principal
 
-`images/MainActivity.png`
+![Pantalla Principal](image/MainActivity.png)
 
 **Elementos principales:**
 - **Logo central**: Icono personalizado con elevación de 8dp
@@ -116,7 +116,7 @@ Deberías ver la pantalla principal con:
 
 ### 2. PresentationActivity – Presentación Personal
 
-`images/PresentationActivity.png`
+![Pantalla de Presentación](image/PresentationActivity.png)
 
 **Elementos principales:**
 - **Título**: "Presentación personal" (24sp) con sombra
@@ -132,7 +132,7 @@ Deberías ver la pantalla principal con:
 
 ### 3. FormActivity – Formulario de Contacto
 
-`images/FormActivity.png`
+![Pantalla de Formulario](image/FormActivity.png)
 
 **Elementos principales:**
 - **Icono superior**: Email icon (56x56dp)
@@ -151,7 +151,7 @@ Deberías ver la pantalla principal con:
 
 ### 4. FormActivity – Confirmación de Envío
 
-`images/FormEnviado.png`
+![Confirmación de Envío](image/FormEnviado.png)
 
 **Comportamiento tras envío exitoso:**
 - **Toast**: "Mensaje enviado correctamente ✉️"
