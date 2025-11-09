@@ -135,7 +135,7 @@ Deberías ver la pantalla principal con:
 ![Pantalla de Formulario](image/FormActivity.png)
 
 **Elementos principales:**
-- **Icono superior**: Email icon (56x56dp)
+- **Icono superior**: Email iconn (56x56dp)
 - **Título**: "Formulario de contacto" (24sp)
 - **Card del formulario**: Fondo semitransparente (#30FFFFFF)
 - **Campos de entrada** (con iconos):
