@@ -52,8 +52,8 @@ La app demuestra el dominio de conceptos fundamentales:
 ### Instalación
 
 #### 1. Descargar el Proyecto
-- Clona el repositorio o descarga el ZIP
-- Descomprime en una carpeta de tu elección
+- Clona el repositorio: https://github.com/Carolinatxt/ProgramacionMultimedia1TrimestreActEva01.git
+- O descarga el ZIP y descomprime en una carpeta de tu elección
 
 #### 2. Abrir en Android Studio
 1. Inicia Android Studio
